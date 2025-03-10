@@ -31,16 +31,6 @@ services:
     volumes:
       - db_data:/var/lib/mysql
       - ./db-init:/docker-entrypoint-initdb.d
-  
-  phpmyadmin:
-    image: phpmyadmin:5.2
-    container_name: api_pma
-    ports:
-      - "8080:80"
-    env_file:
-      - ./env/${ENV}.env
-    depends_on:
-      - db
 
 volumes:
   db_data:
