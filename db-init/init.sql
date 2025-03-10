@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS api_db;
+
+USE api_db;
+
+CREATE TABLE IF NOT EXISTS messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    content TEXT NOT NULL
+);
